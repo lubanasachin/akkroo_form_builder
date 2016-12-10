@@ -1,0 +1,35 @@
+<div class="settingBox">
+	<div class="settingHeader">
+		<div class="headLbl" ng-click="showDiv = !showDiv">{{field.fieldName}} - {{field.fieldType}}</div>
+		<div class="headClose" ng-click="removeMe()">X</div>
+	</div>
+	<div class="settingBody" ng-show="showDiv">
+		<div class='box'><label class="formLbl">Field Type:</label> {{field.fieldType}}</div>
+		<div class='box'>
+			<label class="formLbl">Image src: </label> 
+			<input type="text" value="{{field.defaultValue}}" class="inputTxt" maxlength="100" ng-model="field.defaultValue" />
+		</div>
+        <div class='box'>
+            <label class="formLbl">Use as: </label>
+            <label><input type="radio" value="logo" name="useas-{{field.formId}}-{{field.fieldId}}" ng-model="field.useImageAs" />&nbsp; Logo</label>
+            <label><input type="radio" value="banner" name="useas-{{field.formId}}-{{field.fieldId}}" ng-model="field.useImageAs" />&nbsp; Banner</label>
+            <label><input type="radio" value="background" name="useas-{{field.formId}}-{{field.fieldId}}" ng-model="field.useImageAs" />&nbsp; Background</label>
+        </div>
+        <div class='box'>
+            <label class="formLbl">Event: </label>
+			<select id='eventType-{{field.formId}}-{{field.fieldId}}'>
+				<option value='0'>Select Event</option>
+				<option ng-repeat="items in field.allEvents" value='{{items.event}}'>{{items.event}}</option>
+			</select>
+			<select id='eventAction-{{field.formId}}-{{field.fieldId}}'>
+				<option value='0'>Select Action</option>
+				<option ng-repeat="items in field.allActions" value='{{items.action}}'>{{items.label}}</option>
+			</select>
+			<button ng-click='addEvents();' class="btn btn-primary">Add</button>
+        </div>
+        <div class='optionsBox'>
+            <label class="formLbl">Added Event: </label>
+			<div id='event-{{field.formId}}-{{field.fieldId}}' class='eventBox'>&nbsp;</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Exo');
+body {margin: 0;padding: 0;font-size: 12px;font-family: 'Exo', sans-serif;color: #000;background-color: #f8f8f8;}
+a {text-decoration: none;}
+.actionContainer {float: left;margin: 10px 0 0 0;width: 100%;text-align: center;}
+.appContainer {float: left;width: 100%;height: 520px;overflow: auto;margin: 10px 0 0 0;border: 1px solid #ccc;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;}
+.settingBox {border-radius: 5px;border: 1px solid #ccc;margin: 10px 0 10px 10px;width: 95%;float: left;}
+.formHeader {height: 40px;line-height: 40px;float: left;width: 100%;text-align: center;font-weight: bold;color: #fff;background-color: rgb(51, 122, 183);}
+.settingHeader {height: 40px;line-height: 40px;float: left;width: 100%;background-color: rgb(221, 221, 221);}
+.settingBody {float: left;height: 250px;overflow: auto;margin: 10px;width: 95%;}
+.headLbl {float: left;margin: 0 0 0 10px;cursor: pointer;}
+.headClose {float: right;margin: 0 10px 0 0;font-size: 14px;font-weight: bold;cursor: pointer;}
+.settingBody .box {height: 40px;line-height: 40px;margin: 5px 0 5px 5px;width: 95%;float: left;}
+.lbl {float: left;height: 30px;line-height: 30px;margin: 5px 10px 0 0;}
+.formLbl {float: left;height: 30px;line-height: 30px;margin: 5px 10px 0 0;width: 120px;}
+.optionsAdded {float: left;border: 1px solid #ccc;border-radius: 5px;margin: 5px 0 5px 5px;}
+.inputTxt {float: left;height: 30px;line-height: 30px;width:150px;border: 1px solid #ccc;}
+.required {color: red;font-weight: bold;}
+.optionsBox {width: 100%;float: left;}
+.eventBox {width: 300px;border: 1px solid #ccc;float: left;height:100px;}
+.eventAdded {float: left;margin: 0 0 0 10px;}
+#wrapper {width: 100%;}
+#page-wrapper {padding: 0 15px;min-height: 568px;background-color: #fff;}
+@media(min-width:768px) {#page-wrapper {position: inherit;margin: 0 0 0 250px;padding: 0 30px;border-left: 1px solid #e7e7e7;}}
+.navbar-top-links {margin-right: 0;}
+.navbar-top-links li {display: inline-block;}
+.navbar-top-links li:last-child {margin-right: 15px;}
+.navbar-top-links li a {padding: 15px;min-height: 50px;}
+.sidebar .sidebar-nav.navbar-collapse {padding-right: 0;padding-left: 0;}
+.sidebar ul li {border-bottom: 1px solid #e7e7e7;}
+.sidebar ul li a.active {background-color: #eee;}
+@media(min-width:768px) {.sidebar {z-index: 1;position: absolute;width: 250px;margin-top: 51px;}}
+.btn-outline {color: inherit;background-color: transparent;transition: all .5s;}
+.btn-primary.btn-outline {color: #428bca;}
+.btn-primary.btn-outline:hover{color: #fff;}

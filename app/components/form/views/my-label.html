@@ -1,0 +1,13 @@
+<div class="settingBox">
+	<div class="settingHeader">
+		<div class="headLbl" ng-click="showDiv = !showDiv">{{field.fieldName}} - {{field.fieldType}}</div>
+		<div class="headClose" ng-click="removeMe()">X</div>
+	</div>
+	<div class="settingBody" ng-show="showDiv">
+		<div class='box'><label class="formLbl">Field Type: </label>{{field.fieldType}}</div>
+		<div class='box'>
+			<label class="formLbl">Field Title: </label> 
+			<input type="text" value="{{field.fieldName}}" ng-model="field.fieldName" class="inputTxt" maxlength="100" />
+		</div>
+	</div>
+</div>

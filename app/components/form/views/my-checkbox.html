@@ -1,0 +1,42 @@
+<div class="settingBox">
+	<div class="settingHeader">
+		<div class="headLbl" ng-click="showDiv = !showDiv">{{field.fieldName}} - {{field.fieldType}}<span class="required" ng-show="field.isRequired">*</span></div>
+		<div class="headClose" ng-click="removeMe()">X</div>
+	</div>
+	<div class="settingBody" ng-show="showDiv">
+		<div class='box'><label class="formLbl">Field Type: </label>{{field.fieldType}}</div>
+		<div class='box'>
+			<label class="formLbl">Field Title: </label> 
+			<input type="text" value="{{field.fieldName}}" ng-model="field.fieldName" class="inputTxt" maxlength="100" />
+		</div>
+		<div class='box'>
+			<label class="formLbl">Field Default Value: </label> 
+			<input type="text" value="{{field.defaultValue}}" class="inputTxt" maxlength="100" ng-model='field.defaultValue' />
+		</div>
+        <div class='box'>
+            <label class="formLbl">Required: </label>
+            <label class='lbl'>
+                <input type="radio" value="1" name="req-{{field.formId}}-{{field.fieldId}}" ng-click="field.isRequired = true" ng-bind='field.isRequired' />&nbsp; Yes
+            </label>&nbsp;
+            <label>
+                <input type="radio" value="0" name="req-{{field.formId}}-{{field.fieldId}}" ng-click="field.isRequired = false" ng-bind='field.isRequired' />&nbsp; No
+            </label>
+        </div>
+        <div class='box'>
+            <label class="formLbl">Event: </label>
+            <select id='eventType-{{field.formId}}-{{field.fieldId}}'>
+                <option value='0'>Select Event</option>
+                <option ng-repeat="items in field.allEvents" value='{{items.event}}'>{{items.event}}</option>
+            </select>
+            <select id='eventAction-{{field.formId}}-{{field.fieldId}}'>
+                <option value='0'>Select Action</option>
+                <option ng-repeat="items in field.allActions" value='{{items.action}}'>{{items.label}}</option>
+            </select>
+            <button ng-click='addEvents();' class="btn btn-primary">Add</button>
+        </div>
+        <div class='optionsBox'>
+            <label class="formLbl">Added Event: </label>
+            <div id='event-{{field.formId}}-{{field.fieldId}}' class='eventBox'>&nbsp;</div>
+        </div>
+	</div>
+</div>
